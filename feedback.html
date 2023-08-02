@@ -58,7 +58,8 @@
             gap: 1rem;
             justify-items: center;
             margin-top: 2rem;
-            width: 50rem;
+            width: 100%;
+            /* Adjust width for mobile */
             height: auto;
         }
 
@@ -90,6 +91,15 @@
             display: flex;
             justify-content: center;
         }
+
+        /* Media queries for mobile responsiveness */
+        @media (max-width: 768px) {
+            .feedback-container {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                width: 90%;
+                /* Adjust width for smaller screens */
+            }
+        }
     </style>
 </head>
 
@@ -100,7 +110,7 @@
 
     <section>
         <div class="section-content">
-            <h2>Students' Feedback 2023 </h2>
+            <h2>Students' Feedbacks 2023</h2>
             <div class="feedback-container">
                 <div class="feedback-item">
                     <img class="feedback-img" src="100-2.jpg" alt="Feedback 1">
